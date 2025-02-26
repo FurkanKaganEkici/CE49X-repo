@@ -40,7 +40,7 @@ def compute_statistics(data):  #function of getting min max mean median std dev
         print("-")
 
 if __name__ == "__main__":  #defining file path
-    file_path = r"C:\Users\furka\OneDrive\Masaüstü\lab\CE49X-repo\datasets\soil_test.csv"
+    file_path = '../../datasets/soil_test.csv'
     data = load_data(file_path)
     
     if data is not None:
