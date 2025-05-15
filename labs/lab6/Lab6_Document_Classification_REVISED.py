@@ -84,7 +84,8 @@ def show_top_keywords(vectorizer, model, labels, metadata_size):
 
 
 def main():
-    df = load_data("construction_documents.json")
+    construction_documents = os.path.join(os.path.dirname(__file__), "..", "..", "datasets", "construction_documents.json")
+    df = load_data(construction_documents)
     df['clean_content'] = df['content'].apply(preprocess_text)
     metadata_features, dv = preprocess_metadata(df)
 
